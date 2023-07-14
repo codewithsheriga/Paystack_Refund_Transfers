@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Paystack Refund</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Paystack Refund</h1>
+    <form id="refundForm">
+      <label for="transactionId">Transaction ID:</label>
+      <input type="text" id="transactionId" required>
+
+      <label for="refundAmount">Refund Amount :</label>
+      <input type="number" id="refundAmount" required>
+
+      <label for="refundReason">Refund Reason:</label>
+      <textarea id="refundReason" required></textarea>
+
+      <button type="submit">Initiate Refund</button>
+    </form>
+    <div id="refundResponse"></div>
+  </div>
+  <div id="loadingScreen">
+    <div class="loading-spinner">
+     
+      Loading...
+    </div>
+    <div class="loading-text">Processing Refund</div>
+  </div>
+  
+
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
